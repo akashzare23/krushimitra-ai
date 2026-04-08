@@ -1,0 +1,28 @@
+name: krushimitra_ai
+version: "1.0.0"
+description: Climate-adaptive farming decision environment for AI agents
+
+entrypoint:
+  app: app.main:app
+
+tasks:
+  - name: crop_selection
+    description: Choose the best crop based on climate and farm conditions
+    reward_range: [0.0, 1.0]
+
+  - name: sowing_timing
+    description: Decide whether it is the right time to sow
+    reward_range: [0.0, 1.0]
+
+  - name: irrigation
+    description: Decide when and how much to irrigate for best crop health and water efficiency
+    reward_range: [0.0, 1.0]
+
+api:
+  reset: /reset
+  step: /step
+  state: /state
+
+models:
+  state_model: FarmState
+  action_model: AgentAction
