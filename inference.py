@@ -226,3 +226,7 @@ def run(input_data):
         "message": "KrushiMitra AI working",
         "input": input_data
     }
+    import requests
+
+def run(input_data):
+    return {"result": "KrushiMitra working"}
