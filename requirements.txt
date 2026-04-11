@@ -3,5 +3,3 @@ uvicorn
 pydantic
 python-dotenv
 openai
-requests
-gradio

@@ -1,24 +1,9 @@
-import gradio as gr
-import subprocess
-import threading
-import time
-import requests
+from fastapi import FastAPI
+import uvicorn
 
-def run_api():
-    subprocess.run(["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"])
+from app.main import app as fastapi_app
 
-threading.Thread(target=run_api, daemon=True).start()
+app = fastapi_app
 
-time.sleep(5)
-
-with gr.Blocks() as demo:
-    gr.Markdown("# 🌾 KrushiMitra AI")
-    gr.Markdown("Climate-Adaptive Farming Decision Environment")
-    gr.Markdown("This Space runs the KrushiMitra AI OpenEnv environment.")
-    gr.Markdown("Use the API endpoints directly:")
-    gr.Markdown("- `/docs`")
-    gr.Markdown("- `/reset`")
-    gr.Markdown("- `/step`")
-    gr.Markdown("- `/state`")
-
-demo.launch()
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=7860)
