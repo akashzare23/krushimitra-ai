@@ -1,3 +1,12 @@
+---
+title: KrushiMitra AI
+emoji: 🌾
+colorFrom: green
+colorTo: blue
+sdk: docker
+app_file: app.py
+pinned: false
+---
 # KrushiMitra AI 🌾
 
 ## Climate-Adaptive Farming Decision Environment
