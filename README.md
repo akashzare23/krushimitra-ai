@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ---
 title: KrushiMitra AI
 emoji: 🌾
@@ -14,7 +14,7 @@ pinned: false
 Climate-Adaptive Farming Decision Environment
 
 updated
-=======
+
 # krushimitra-ai
 AI-based Smart Farming Environment using FastAPI and OpenEnv
->>>>>>> 1eeeebccfb5f7a53c7f19cbbf3caba7083baab97
+
