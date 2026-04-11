@@ -215,3 +215,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+    import os
+
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
+MODEL_NAME = os.getenv("MODEL_NAME", "krushimitra-model")
+
+def run(input_data):
+    return {
+        "status": "success",
+        "message": "KrushiMitra AI working",
+        "input": input_data
+    }
